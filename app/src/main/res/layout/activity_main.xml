@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.pangxinlong.viewuicollection.MainActivity">
+
+    <com.example.pangxinlong.viewuicollection.FlowLayout
+            android:id="@+id/fl_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="item 1"
+                android:gravity="center"
+                android:background="@color/colorAccent"/>
+
+        <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="item 2"
+                android:gravity="center"
+                android:background="@color/colorPrimary"/>
+
+        <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="item 3"
+                android:gravity="center"
+                android:background="@color/colorAccent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="item 4"
+                android:gravity="center"
+                android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="item 5"
+                android:gravity="center"
+                android:background="@color/colorAccent"/>
+
+        <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="item 6"
+                android:gravity="center"
+                android:background="@color/colorAccent"/>
+    </com.example.pangxinlong.viewuicollection.FlowLayout>
+
+
+</android.support.constraint.ConstraintLayout>
