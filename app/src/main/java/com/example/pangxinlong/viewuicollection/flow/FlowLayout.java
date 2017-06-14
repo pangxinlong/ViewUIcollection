@@ -1,4 +1,4 @@
-package com.example.pangxinlong.viewuicollection;
+package com.example.pangxinlong.viewuicollection.flow;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -127,7 +127,7 @@ public class FlowLayout extends ViewGroup {
                 right = left + childView.getMeasuredWidth();
                 bottom = top + childView.getMeasuredHeight() + marginLayoutParams.bottomMargin;
                 childView.layout(left, top, right, bottom);
-                currentLeft = right + marginLayoutParams.rightMargin;
+                currentLeft = right + marginLayoutParams.rightMargin;//设置下一个view的left未知
             }
             currentLeft = 0;
             currentTop += HeightList.get(i);
