@@ -170,6 +170,8 @@ public class WaterfallLayout extends ViewGroup {
         void onItemClick(View view,int position);
     }
 
+    
+
 //    /**
 //     * 存放最大值最小值的类
 //     */
