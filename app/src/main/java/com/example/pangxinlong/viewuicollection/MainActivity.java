@@ -20,9 +20,6 @@ import butterknife.Unbinder;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.fl_custom)
-    FlowLayout mFlowLayout;
-
     @BindView(R.id.lv_viewui)
     ListView mLvViewUI;
 
@@ -41,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         initData();
         setListener();
     }
+
     private void initView() {
         mListAdapter = new ListAdapter(this);
         mLvViewUI.setAdapter(mListAdapter);

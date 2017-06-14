@@ -1,6 +1,9 @@
 package com.example.pangxinlong.viewuicollection.flow;
 
+import com.example.pangxinlong.viewuicollection.R;
+
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -136,10 +139,10 @@ public class FlowLayout extends ViewGroup {
         HeightList.clear();
     }
 
-    public void setOnItemClickListener(final OnItemClickListener onItemClickListener){
-        int childCount=getChildCount();
-        for (int i=0;i<childCount;i++){
-            View view=getChildAt(i);
+    public void setOnItemClickListener(final OnItemClickListener onItemClickListener) {
+        int childCount = getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            View view = getChildAt(i);
             final int finalI = i;
             view.setOnClickListener(new OnClickListener() {
                 @Override
@@ -150,7 +153,8 @@ public class FlowLayout extends ViewGroup {
         }
     }
 
-    interface  OnItemClickListener{
-        void onItemClick(View view,int position);
+    interface OnItemClickListener {
+
+        void onItemClick(View view, int position);
     }
 }

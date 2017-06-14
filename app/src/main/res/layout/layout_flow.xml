@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     <com.example.pangxinlong.viewuicollection.flow.FlowLayout
             android:id="@+id/fl_custom"
             android:layout_width="match_parent"
@@ -12,41 +14,41 @@
                 android:layout_height="50dp"
                 android:text="item 1"
                 android:gravity="center"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent" />
 
         <TextView
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:text="item 2"
                 android:gravity="center"
-                android:background="@color/colorPrimary"/>
+                android:background="@color/colorPrimary" />
 
         <TextView
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="item 3"
                 android:gravity="center"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent" />
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:text="item 4"
                 android:gravity="center"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
         <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="item 5"
                 android:gravity="center"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent" />
 
         <TextView
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="item 6"
                 android:gravity="center"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent" />
     </com.example.pangxinlong.viewuicollection.flow.FlowLayout>
 </LinearLayout>

@@ -17,7 +17,8 @@ import butterknife.Unbinder;
  * Created by pangxinlong on 2017/6/14.
  */
 
-public class FlowActivity extends AppCompatActivity{
+public class FlowActivity extends AppCompatActivity {
+
     @BindView(R.id.fl_custom)
     FlowLayout mFlowLayout;
 
@@ -26,7 +27,7 @@ public class FlowActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_flow);
         mUnbinder = ButterKnife.bind(this);
         mFlowLayout.setOnItemClickListener(new FlowLayout.OnItemClickListener() {
             @Override

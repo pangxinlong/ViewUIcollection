@@ -1,6 +1,9 @@
 package com.example.pangxinlong.viewuicollection.flow;
 
+import com.example.pangxinlong.viewuicollection.R;
+
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -11,11 +14,25 @@ import java.util.List;
 
 /**
  * Created by pangxinlong on 2017/6/13.
+ * 瀑布流
  */
 
 public class WaterfallLayout extends ViewGroup {
 
-    int lines = 4;
+    /**
+     * 实现思路
+     *
+     * 1、在onMeasure中判断父布局widthMeasureSpec与heightMeasureSpec属于那种mode，一种MeasureSpec.EXACTLY有准确值，另一种未知
+     * 2、在mode未知时 需循环便利每一个子view，调用measureChild()分别测量每个子view大小
+     * 3、用一个List<List<View>>存放有所子view，外层list存放列数，内部list存放列内view个数。
+     * 4、当第一行的子view加入时，分成N列存放到对应的列的list中，再用一个lineHeightList存放每列中子view的高度，并获取最大值作为setMeasuredDimension的高度。
+     * 5、当非第一行子view加入时，判断ineHeightList中高度最低的列并取出对应list的角标，然后将此列的高度加上新加入的子view高度并更新到lineHeightList中，
+     *    同时和maxHeight比较取大者，作为setMeasuredDimension的高度
+     */
+
+
+
+    int lines;//列数
 
     List<List<View>> mListColumn;//存储所有view 按列排列
 
@@ -25,6 +42,9 @@ public class WaterfallLayout extends ViewGroup {
         super(context, attrs);
         mListColumn = new ArrayList<>();
         lineHeightList = new ArrayList<>();
+
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.WaterFall);
+        lines=typedArray.getInteger(R.styleable.WaterFall_column,3);
     }
 
     @Override
