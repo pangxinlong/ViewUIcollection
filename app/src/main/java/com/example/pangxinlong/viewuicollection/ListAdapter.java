@@ -58,8 +58,8 @@ public class ListAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-            viewHolder.bindData(mDataList.get(position));
         }
+        viewHolder.bindData(mDataList.get(position));
         return convertView;
     }
 
