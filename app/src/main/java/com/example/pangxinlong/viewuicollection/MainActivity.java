@@ -3,6 +3,7 @@ package com.example.pangxinlong.viewuicollection;
 import com.example.pangxinlong.viewuicollection.flow.FlowActivity;
 import com.example.pangxinlong.viewuicollection.flow.FlowLayout;
 import com.example.pangxinlong.viewuicollection.flow.WaterfallActivity;
+import com.example.pangxinlong.viewuicollection.recyclerview.RecyclerViewActivity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         mDataList = new ArrayList<>();
-        mDataList.add("WaterfallActivity");
-        mDataList.add("FlowActivity");
+        mDataList.add("自定义流布局(一)");
+        mDataList.add("自定义流布局(二)");
+        mDataList.add("自定义itemTouchHelper(一)");
         mListAdapter.setData(mDataList);
     }
 
@@ -58,10 +60,13 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        WaterfallActivity.start(MainActivity.this);
+                        FlowActivity.start(MainActivity.this);
                         break;
                     case 1:
-                        FlowActivity.start(MainActivity.this);
+                        WaterfallActivity.start(MainActivity.this);
+                        break;
+                    case 2:
+                        RecyclerViewActivity.start(MainActivity.this);
                         break;
                 }
             }

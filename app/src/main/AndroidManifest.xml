@@ -19,6 +19,7 @@
         <activity android:name=".flow.WaterfallActivity">
         </activity>
         <activity android:name=".flow.FlowActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

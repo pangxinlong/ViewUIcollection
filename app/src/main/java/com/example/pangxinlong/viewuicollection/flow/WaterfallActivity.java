@@ -1,6 +1,5 @@
 package com.example.pangxinlong.viewuicollection.flow;
 
-import com.example.pangxinlong.viewuicollection.MainActivity;
 import com.example.pangxinlong.viewuicollection.R;
 
 import android.content.Context;
@@ -34,12 +33,15 @@ public class WaterfallActivity extends AppCompatActivity {
 
     private Unbinder mUnbinder;
 
+    private int childCount;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_waterfall);
         mUnbinder = ButterKnife.bind(this);
         setListener();
+        childCount = mWfCustom.getChildCount();
     }
 
     private void setListener() {
@@ -68,7 +70,7 @@ public class WaterfallActivity extends AppCompatActivity {
         } while (height < 50);
 
         TextView textView = new TextView(WaterfallActivity.this);
-        textView.setText("item");
+        textView.setText("" + childCount++);
         textView.setBackgroundColor(Color.BLUE);
         ViewGroup.MarginLayoutParams param = new ViewGroup.MarginLayoutParams(
                 ViewGroup.MarginLayoutParams.MATCH_PARENT, height);
